@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title> Spa Treats - A Health / Spa Saloon PSD Template </title>
+
+<!-- **Favicon** -->
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+<!-- **CSS - stylesheets** -->
+<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+
+<!-- **Additional - stylesheets** -->
+<link href="responsive.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 8]>
+<link href="css/ie8.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link href="css/jquery-ui-1.10.1.css" rel="stylesheet"/>
+<link href="css/santiago.datepicker.css" rel="stylesheet"/>
+<link href="css/cangas.datepicker.css" rel="stylesheet"/>
+
+<!-- **jQuery** -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="js/spa.custom.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.1.min.js"></script>
+
+	<script>
+		$(function() {
+			$( "#dot" ).datepicker({
+				inline: true,
+				showOtherMonths: true
+			})
+			.datepicker('widget').wrap('<div class="ll-skin-cangas"/>');
+		});
+	</script>	
+	
+	<script type="text/javascript" src="js/spa.booknow.js"></script>
+ <script type='text/javascript' src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+ <script type='text/javascript' src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/additional-methods.js"></script>
+</head>
+<body>
+
+<!-- **Header** -->
+<div id="header">
+	<div class="container">
+    
+    	<!-- **Top-Menu** -->
+    	<div id="top-menu">
+        	<ul class="menu">
+            	<li> <a href="index.html" title=""> <span> Its home </span> Home </a>                   
+                </li>                                                        
+                <li> <a href="aboutus.html" title=""> <span> Who we are </span> About Us </a> 
+                </li>
+                <li> <a href="services.html" title=""> <span> What we offer </span> Services </a> 
+ 				<ul>
+                    	<li> <a href="services.html" title=""> Naturopathy </a>  </li>
+                        <li> <a href="services-with-sidebar.html" title=""> Ayurvedic </a>  </li>
+                        <li> <a href="services-with-sidebar.html" title=""> Physiotherapy </a>  </li>
+                        <li> <a href="services-with-sidebar.html" title=""> Yoga </a>  </li>
+                        <li> <a href="services-with-sidebar.html" title=""> accommodation </a>  </li>
+                    </ul> 
+                </li>
+                <li> <a href="therapists.html" title=""> <span> Know us </span> Therapists </a> </li>
+                <li> <a href="blog.html" title=""> <span> What's up </span> Blog </a> </li>
+                <li> <a href="gallery-fourcolumn.html" title=""> <span> Visual look </span> Gallery </a> 
+                </li>
+                <li class="current_page_item"> <a href="booknow.html" title=""> <span> We are here </span>Contact Us </a> </li>
+                
+            </ul>        	
+        </div><!-- **Top-Menu - End** -->
+        
+        <!-- **Logo** -->
+        <div id="logo">
+        	<a href="index.html" title=""> <img src="images/logo.png" alt="" title="" /> </a>
+        </div><!-- **Logo - End** -->
+        
+        <!-- **Searchform** -->
+        <form action="#" id="searchform" method="get">
+        	<fieldset>
+                <input name="Search" type="text" onblur="this.value=(this.value=='') ? 'Enter Keyword' : this.value;" onfocus="this.value=(this.value=='Enter Keyword') ? '' : this.value;" value="Enter Keyword" alt="Search our site" class="text_input" />
+                <input name="submit" type="submit" class="button" value="" />
+            </fieldset>
+        </form><!-- **Searchform - End** -->
+    	
+    </div>
+</div><!-- **Header - End** -->
+
+
+<!-- ** Main** -->
+<div id="main">
+
+	<!-- **Breadcrumb** -->
+	<!-- <div class="breadcrumb_container">
+    <div class="breadcrumb">
+         <div class="container">
+            <a href="#" class="test"> Home </a>
+           <a href="#" >Contact Us</a>
+            <span class="arrow"> </span>
+            <span class="current-crumb"> Contact Us </span>
+        </div>   **Breadcrumb - End**      	
+    </div>
+    </div> -->
+    
+    
+<div class="breadcrumb_background">
+<div class="container">
+<ul class="breadcrumb">
+	<li><a href="index.html"><img src="images/home2.png" width="30" height="30"></img></a></li>
+	<li><a href="#" class="current_crumb">Contact Us</a></li>
+</ul>
+</div>
+</div>
+    
+	<!-- **Main Container** -->
+	<div class="main-container">
+    
+    	<!-- **Content Full Width** -->
+    	<div class="content content-full-width"> 
+        
+        	<h1 class="title"> <span> Book Now </span> </h1>
+            
+            <div class="hr_invisible"> </div>
+            
+            <div class="column one-half">
+            	<div id="ajax_message"></div>
+            	<form id="booknow-form" action="php/booknow.php" method="get" class="booknow-form">
+                	<p>
+                        <label class="firstname" id="lfname"> First Name <span class="required"> * </span> </label>
+                        <input name="fname" type="text" id="fname" /><span class="error_msg"></span>
+                    </p>
+                    <p>
+                        <label id="llname"> Last Name <span class="required"> * </span> </label>
+                        <input name="lname" type="text" id="lname" />
+                    </p>
+                    <p>
+                        <label id="gend"> Gender </label>
+                        <span class="gender">
+                            <input type="radio" class="radiob1" id="Male" name="Gender" value="Male" />
+                            Male
+                            <input type="radio" class="Female" id="Female" name="Gender" value="Female" checked="checked" />
+                            Female
+                        </span>
+                    </p>
+                    <p>
+                        <label id="lphone"> Telephone <span class="required"> * </span> </label>
+                        <input id="phone" name="phone" type="text" />
+                    </p>
+                    <p>
+                        <label id="lemail"> Email <span class="required"> * </span> </label>
+                        <input id="email" name="email" type="text" />
+                    </p>
+                    <p>
+                        <label id="laddress"> Address </label>
+                        <textarea id="address" name="address" cols="" rows=""></textarea>
+                    </p>
+                    <p>
+                    	<label id="dotlabel"> Date of Treatment <span class="required"> * </span> </label>
+                    	<input type="text" id="dot" name="dot"/>
+                        <!-- <select class="day" id="treatment_day" name="treatment_day">	
+                            <option value="">Day</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option
+                            ><option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option
+                            ><option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        
+                        <select class="day" id="treatment_month" name="treatment_month">
+                            <option value="">Month</option>
+                            <option value="8">Aug</option>
+                            <option value="9">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
+                        </select>
+                        <select class="day" id="treatment_year" name="treatment_year">
+                            <option value="">Year</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                        </select>-->
+                    </p> 
+                    <p>
+                    	<label id="lPreferredTime"> Preferred time <span class="required"> * </span> </label>
+                        <select class="salutation" id="PreferredTime" name="PreferredTime">
+	                        <option>Time</option>
+                        	<option>8 AM</option>
+                            <option>9 AM</option>
+                            <option>10 AM</option>
+                            <option>11 AM</option>
+                            <option>12 PM</option>
+                            <option>01 PM</option>
+                            <option>02 PM</option>
+                            <option>03 PM</option>
+                            <option>04 PM</option>
+                            <option>05 PM</option>
+                            <option>06 PM</option>
+                        </select>
+                    </p>
+                    <p>
+                    	<label id="ltreatment"> Type of Treatment <span class="required"> * </span></label> 
+                        <select class="treatment" id="treatment" name="treatment">
+                            <option value="">Please Select a Treatment</option>
+                            <option value="Jivaniya">Jivaniya</option>
+                            <option value="Mewar Khas">Mewar Khas</option>
+                            <option value="Pehlwan Malish">Pehlwan Malish</option>
+                        </select>       
+                    </p>
+                    <p>
+                        <label id="lpersons"> No. of Persons <span class="required"> * </span> </label>
+                        <input id="persons" name="persons" type="text" />
+                    </p>
+                    <p>
+                        <label id="lspecialrequests"> Special Requests </label>
+                        <textarea id="specialrequests" name="requests" cols="" rows=""></textarea>
+                    </p>
+                    <p class="submit">
+                    	<input name="booknow" type="submit" value="Book Now" />
+                    </p>                    
+                </form>   
+            </div>
+            
+            <div class="column one-half last">    
+            	<div class="booknow-page">
+                    <div id="contact">
+                    <h1> Contact Details </h1>  
+                    <ul class="contact-details">   
+                        <li> <span class="address"> </span> <p> H.No:23-6-200 <br /> Hunter Road, Near Orugallu Petrol Pump , Warangal-506001 <br /> Telangana,INDIA </p> </li>             
+                        <li> <span class="mail"> </span> <p> <a href="" title=""> knchwgl@gmail.com </a> </p> </li>
+                        <li> <span class="phone"> </span> <p> +91-9966627208 , +91-9849851421</p> </li>                        
+                    </ul>
+                </div>
+	                <div id="working_hours">
+	                    <h1> Working Hours </h1>
+	                    <div class="notice"> <span class="left"> Mon - Fri : </span> <span class="right"> 8am - 6pm </span> </div>
+	                    <div class="notice"> <span class="left"> Sat &amp; Sunday : </span> <span class="right"> 8am - 10pm </span> </div>
+	                 </div>
+	                 <div>
+	                 <h1> Location </h1>
+	                <div class="googlemap-border">
+	                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.7922131606233!2d79.5679277!3d17.9884017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2048b4de2a67ff4a!2sKakatiya+Nature+Cure+Hospital!5e0!3m2!1sen!2sin!4v1435323385819" width="100%" height="420" frameborder="0" style="border:0"></iframe>
+	                </div>
+	                </div>
+                
+                </div>          
+            </div>
+            
+        </div> <!-- **Content Full Width - End** -->   	
+        
+        <!-- **Newsletter** -->
+        <div id="newsletter">
+        	<h2> Subscribe to Newsletter </h2>
+            <form action="#" method="get">
+            	<input name="name" type="text" onblur="this.value=(this.value=='') ? 'Enter Name' : this.value;" onfocus="this.value=(this.value=='Enter Name') ? '' : this.value;" value="Enter Name" />
+                <input name="name" type="text" onblur="this.value=(this.value=='') ? 'Enter Email Address' : this.value;" onfocus="this.value=(this.value=='Enter Email Address') ? '' : this.value;" value="Enter Email Address" />
+                <input name="submit" type="submit" value="Subscribe" />
+            </form>
+        </div><!-- **Newsletter - End** -->
+        
+    </div><!-- **Main Container - End** -->
+    
+    <!-- ** Footer** -->
+    <div id="footer">
+    	<div class="main-container">
+        
+        	<!-- **Recent Entries** -->
+        	<div class="column one-fourth">
+            	<div class="widget widget_recent_entries">
+                    <h2 class="widgettitle"> <span> Latest Posts </span> </h2>
+                    <ul>
+                    	<li> 
+                        	<a href="blog-single.html" title=""> <img src="http://placehold.it/54x54" alt="" title="" /> </a>
+                            <h6> <a href="blog-single.html" title=""> Living In Style </a> </h6>
+                            <p> Nulla ullamcorper faucibus tellus sed malesuada. </p>
+                        </li>
+                        <li> 
+                        	<a href="blog-single.html" title=""> <img src="http://placehold.it/54x54" alt="" title="" /> </a>
+                            <h6> <a href="blog-single.html" title=""> Healthy Mind and ... </a> </h6>
+                            <p> In convallis hendrerit velit id vulputat. </p>
+                        </li>
+                        <li> 
+                        	<a href="blog-single.html" title=""> <img src="http://placehold.it/54x54" alt="" title="" /> </a>
+                            <h6> <a href="blog-single.html" title=""> Living In Style </a> </h6>
+                            <p> Duis scelerisque, metus ac adipiscing nvallis. </p>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- **Recent Entries - End** -->
+            
+            <!-- **Resources** -->
+            <div class="column one-fourth">
+            	<div class="widget">
+                    <h2 class="widgettitle"> <span> Resources </span> </h2>
+                    <ul>
+                        <li> <a href="" title=""> Spa Guide - The Complete </a> </li>
+                        <li> <a href="" title=""> Salon Guide </a> </li>
+                        <li> <a href="" title=""> Yoga Guide </a> </li>
+                        <li> <a href="" title=""> Pilates Guide </a> </li>
+                        <li> <a href="" title=""> Wellness Guide </a> </li>
+                        <li> <a href="" title=""> Fitness Guide </a> </li>
+                        <li> <a href="" title=""> Readers' Choice Awards </a> </li>
+                        <li> <a href="" title=""> Club Spa Blog </a> </li>
+                        <li> <a href="" title=""> SpaEvidence </a> </li>
+                    </ul>
+                </div>
+            </div><!-- **Resources - End** -->
+            
+            <!-- **Testimonials** -->
+            <div class="column one-fourth">
+            	<div class="widget">
+                    <h2 class="widgettitle"> <span> Testimonials </span> </h2>
+                    
+                    <div class="testimonial-skin-carousel">
+                        <ul class="testimonial-carousel">
+                            <li>
+                                <blockquote>                                
+                                    Nulla ullamcorper faucibus tellus sed malesuada. In convallis hendrerit velit id vulputate. In hac habitasse platea dictumst. Donec eget consequat urna. Pellentesque ac 
+                                    nibh risus. Duis scelerisque, metus ac adipiscing convallis, nunc lectus commodo leo, a vulputate nisi elit in nisl. 
+                                    <span> - Emmy Rossum </span>
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote>
+                                	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed sapien ac risus pulvinar consequat. Nulla a urna a nibh consectetur semper quis hendrerit felis. 
+                                    Aliquam sodales, elit sit amet pellentesque dapibus. 
+                                    <span> - Aliquam erat </span>
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote>
+                                    Proin magna diam, mollis vel pretium et, mattis ac erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                                    Quisque in eros at nisi malesuada porttitor. Aenean blandit ornare urna at hendrerit. 
+                                    <span> - Quisque vehicula </span>
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote>
+                                    Nunc arcu magna, egestas non gravida vel, condimentum eu elit. Morbi egestas erat a urna mollis malesuada. Aliquam quis orci sem, ut facilisis massa. Suspendisse varius nisi vitae quam porta convallis. Aliquam ac quam neque, quis feugiat est. Praesent odio diam.
+                                    <span> - Aenean malesuada </span>
+                                </blockquote>
+                            </li>
+                        </ul> 
+                    </div>
+                    
+                </div>
+            </div><!-- **Testimonials - End** -->
+            
+            <!-- **Contact Us** -->
+            <div class="column one-fourth last">
+            	<div class="widget">
+                    <h2 class="widgettitle"> <span> Contact Us </span> </h2>
+                    <ul class="contact-details">
+                       <li> <span class="mail"> </span> <p> <a href="" title=""> knchwgl@gmail.com </a> </p> </li>
+                        <li> <span class="phone"> </span> <p>+91-9966627208 </br>+91-9849851421</p> </li>  
+                        <li> <span class="address"> </span> <p>H.No:23-6-200 ,</br>Hunter Road ,</br> Near Orugallu Petrol Pump , Warangal-506001 ,Telangana , INDIA </p> </li> 
+                    </ul>
+                   </div>
+                <div class="widget social-widget">
+                	<h2> <span> We're Social </span> </h2>
+                    <ul>
+                    	<li> 
+                        	<a href="" title=""> 
+                            	<img src="images/facebook-hover.png" alt="" title="" />
+                            	<img src="images/facebook.png" alt="" title="" />                                
+                            </a> 
+                        </li>
+                    	<li> 
+                        	<a href="" title=""> 
+                            	<img src="images/twitter-hover.png" alt="" title="" />
+                            	<img src="images/twitter.png" alt="" title="" />                                
+                            </a> 
+                        </li>
+                    	<li> 
+                        	<a href="" title=""> 
+                            	<img src="images/flickr-hover.png" alt="" title="" />
+                            	<img src="images/flickr.png" alt="" title="" />                                
+                            </a> 
+                        </li>
+                    	<li> 
+                        	<a href="" title=""> 
+                            	<img src="images/youtube-hover.png" alt="" title="" />
+                            	<img src="images/youtube.png" alt="" title="" />                                
+                            </a> 
+                        </li>
+                    </ul>  
+                </div>
+            </div><!-- **Contact Us - End** -->
+        
+        
+        </div>
+    </div><!-- **Footer - End** -->
+    
+    <!-- **Footer Bottom** -->
+    <div class="footer-bottom"> 
+    	<div class="main-container">        
+        	<p> &copy; Spa Treats 2012 | Design: Design themes </p>        
+        </div>
+    </div><!-- **Footer Bottom - End** -->
+
+</div><!-- **Main - End**-->
+
+
+
+</body>
+</html>

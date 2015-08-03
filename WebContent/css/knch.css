@@ -1,0 +1,9 @@
+.knch {
+height:204px;
+width:204px;
+background-image:url('../images/KNC_Images/04 (Custom).jpg'); /*your location of the image may differ*/
+}
+.spa {background-position:0px 0px;}
+.yoga {background-position:-204px 0px;}
+.accomodation {background-position:-408px 0px;}
+.detox {background-position:-612px 0px;}
